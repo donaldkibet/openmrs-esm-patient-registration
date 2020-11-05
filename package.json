@@ -7,7 +7,7 @@
   "license": "MPL-2.0",
   "homepage": "https://github.com/openmrs/openmrs-esm-patient-registration#readme",
   "scripts": {
-    "start": "openmrs debug --importmap @",
+    "start": "webpack-dev-server --https",
     "build": "webpack --mode production",
     "lint": "eslint src --ext tsx",
     "prettier": "prettier --config prettier.config.js --write \"src/**/*.{ts,tsx}\"",
@@ -37,6 +37,7 @@
     "url": "https://github.com/openmrs/openmrs-esm-patient-registration/issues"
   },
   "dependencies": {
+    "carbon-components-react": "^7.23.2",
     "formik": "^2.1.5",
     "yup": "^0.29.1"
   },
@@ -57,6 +58,7 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
+    "@carbon/themes": "^10.22.1",
     "@openmrs/esm-api": "^3.0.0",
     "@openmrs/esm-config": "^3.0.0",
     "@openmrs/esm-error-handling": "^3.0.0",
@@ -66,6 +68,9 @@
     "@testing-library/dom": "^7.24.2",
     "@testing-library/react": "^9.1.3",
     "@testing-library/user-event": "^12.1.5",
+    "@types/carbon-components": "^10.23.0",
+    "@types/carbon-components-react": "^7.23.0",
+    "@types/carbon__icons-react": "^10.19.0",
     "@types/jest": "^24.0.18",
     "@types/lodash": "^4.14.161",
     "@types/react": "^16.9.49",
@@ -94,6 +99,7 @@
     "jest-cli": "^24.9.0",
     "kremling": "^2.0.1",
     "lodash": "^4.17.19",
+    "node-sass": "^4.12.0",
     "openmrs": "^3.0.2",
     "prettier": "^1.18.2",
     "pretty-quick": "^1.11.1",
@@ -102,6 +108,7 @@
     "react-i18next": "^11.7.2",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.2.0",
+    "sass-loader": "^10.0.5",
     "single-spa-react": "^2.10.2",
     "style-loader": "^1.0.0",
     "systemjs-webpack-interop": "^1.1.0",
